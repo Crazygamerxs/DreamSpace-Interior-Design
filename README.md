@@ -1,6 +1,6 @@
 <img align = "right" alt="Coding" width = "300" height = "auto" src="https://cdn.dribbble.com/users/2208943/screenshots/4551446/ailr.gif">
 
-# Interior Design App 🛋️
+# DreamSpace: Interior Design 🛋️
 
 Welcome to our Interior Design App, where creativity meets simplicity! Our goal is to simplify and enhance the interior design process, empowering users to bring their visions to life. Whether you're a design enthusiast or a professional, our app provides a comprehensive solution for creating stunning 3D room designs.
 

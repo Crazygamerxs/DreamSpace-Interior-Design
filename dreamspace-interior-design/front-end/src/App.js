@@ -22,17 +22,17 @@
 // }
 // export default App;
 
-// src/App.js
+// frontend/src/App.js
 import React from 'react';
-import './App.css';
+import UserRegistration from './components/UserRegistration';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div>
       <h1>DreamSpace: Interior Design</h1>
-      {/* Your components go here */}
+      <UserRegistration />
     </div>
   );
-}
+};
 
 export default App;

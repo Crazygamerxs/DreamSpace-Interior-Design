@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: rgb(5, 121, 175);
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .left-box, .right-box {
+            background-color: white;
+            border: 1px solid gray;
+            padding: 10px;
+            height: 520px; /* Set the desired height */
+            box-sizing: border-box; /* Ensure padding and border don't increase width */
+            border-radius: 10px;
+            margin-top: 15px;
+            margin: 10px;
+        }
+
+        .left-box {
+            position: relative;
+            flex: 2.5; /* Adjust flex ratio for the smaller box */
+            width: calc(90.33% - 10px); /* Adjust width considering padding and border */
+        }
+
+        video {
+            width: 100%;
+            height: 100%; /* Adjust to cover the entire left box */
+            border: 1px solid gray;
+            border-radius: 10px;
+            position: absolute; /* Add this to position the video element within the left box */
+            top: 0;
+            left: 0;
+        }
+
+        /* Add styles for the new buttons */
+        #startRecognition, #stopRecognition {
+            background-color: rgb(211, 76, 18);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .right-box {
+            flex: 0.7; /* Adjust flex ratio for the smaller box */
+            width: calc(33.33% - 10px); /* Adjust width considering padding and border */
+            align-items: first baseline;
+        }
+        button {
+            background-color:  rgb(211, 76, 18);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 50px;
+            line-height: 80px;
+            z-index: 100;
+        }
+        .nav-logo h1 {
+            margin: 0; /* Add this to remove default margin */
+            color: white;
+            font-size: 25px;
+            font-weight: 600;
+            margin-right: 600px;
+    
+        }
+
+
+        .nav-button .btn {
+            width: 140px;
+            height: 50px;
+            font-weight: 500;
+            font-size: large;
+            background: rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: .3s ease;
+            margin-top: -10px; /* Adjusted margin */
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-block;
+        }
+
+
+        .btn.white-btn {
+            background: grey;
+            color: #ffffff;
+            margin-top: -40px;
+        }
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .nav-menu-btn {
+            display: none;
+        }
+        .form-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .nav-menu {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .nav-menu.responsive {
+            flex-direction: column;
+        }
+        p {
+            margin-bottom: 10%; /* Adjust the margin as needed */
+            color:rgb(0, 0, 0);
+            font-size: large;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-logo">
+            <h1>{{ username }}</h1>
+        </div>
+        <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="redirect('/register')">
+                    Logout
+                </button>
+            </button>
+        </div>
+    </nav>
+
+    
+    <div class="content">
+        <div class="left-box">
+        </div>        
+
+        <div class="right-box">
+        </div>
+    </div>
+
+<script>
+    function redirect(url) {
+        window.location.href = url;
+    }
+</script>
+</body>
+</html>

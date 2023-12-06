@@ -24,7 +24,7 @@ let object;
 let controls;
 
 // Set which object to render
-let objToRender = 'bedroom_white';
+let objToRender = 'modern_bedroom';
 
 // Instantiate a loader for the .gltf file
 const loader = new GLTFLoader();
@@ -37,8 +37,8 @@ loader.load(
       object = gltf.scene;
       scene.add(object);
   
-      // Adjust the position of the bedroom_white model
-      if (objToRender === "bedroom_white") {
+      // Adjust the position of the bed model
+      if (objToRender === "modern_bedroom") {
         object.position.set(0, -5, 0); // You may need to adjust these values based on your model
       }
   
@@ -54,8 +54,9 @@ loader.load(
     }
 );
 
+
 // Set how far the camera will be from the 3D model
-camera.position.z = objToRender === "bedroom_white" ? 25 : 500;
+camera.position.z = objToRender === "modern_bedroom" ? 25 : 500;
 
 // Add lights to the scene
 const topLight = new THREE.DirectionalLight(0xffffff, 5);
@@ -63,11 +64,11 @@ topLight.position.set(500, 500, 500);
 topLight.castShadow = true;
 scene.add(topLight);
 
-const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "bedroom_white" ? 10 : 1);
+const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "modern_bedroom" ? 10 : 1);
 scene.add(ambientLight);
 
 // Add OrbitControls to the camera
-if (objToRender === "bedroom_white") {
+if (objToRender === "modern_bedroom") {
   controls = new OrbitControls(camera, renderer.domElement);
 }
 

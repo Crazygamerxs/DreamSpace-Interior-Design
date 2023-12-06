@@ -81,7 +81,7 @@
         }
 
         .btn.white-btn {
-            background: rgba(255, 255, 255, 0.7);
+            background: #4caf50;
             color: #ffffff;
         }
         form {
@@ -119,6 +119,21 @@
             margin-right: 200px; /* Add margin for spacing between the logo and other elements */
             margin-left: -20%;
         }
+        ul.flash-messages {
+            list-style-type: none;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .flash-message {
+            color: red;
+            font-size: 18px;
+            border: 2px solid red;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -141,6 +156,16 @@
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit">Register</button>
+        <!-- Display flashed messages -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flash-messages">
+           {% for message in messages %}
+               <li class="flash-message">{{ message }}</li>
+           {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
     </form> 
     
 </body>

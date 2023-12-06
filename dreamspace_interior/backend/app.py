@@ -5,6 +5,11 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 import random
 import time
+import os
+from flask import current_app
+from werkzeug.utils import secure_filename
+import os
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'thisisasecretkey'
@@ -21,12 +26,18 @@ class User(db.Model, UserMixin):
 
     designs = db.relationship('Design', backref='user', lazy=True)
 
+# Add new columns to the Room model
 class Room(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
+    image = db.Column(db.String(100), nullable=False)
+    color = db.Column(db.String(20), nullable=False)
+    date = db.Column(db.String(20), nullable=False)
+    price = db.Column(db.Float, nullable=False)
     user_id = db.Column(db.String(20), db.ForeignKey('user.id'), nullable=False)
 
     designs = db.relationship('Design', backref='room', lazy=True)
+
 
 class Furniture(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -127,21 +138,25 @@ def login():
 
     return render_template('login.html')
 
-
+# The default route is the home page
 @app.route('/')
 def home():
     return render_template('home.html')
 
 
-
+# the dashboard route 
 @app.route('/dashboard')
 @login_required
 def dashboard():
     data = []
     timestamp = int(time.time())
-    return render_template('dashboard.html', username=current_user.username, timestamp=timestamp, data=data)
 
+    # Get the model name from the query parameter
+    model_name = request.args.get('model', None)
 
+    return render_template('dashboard.html', username=current_user.username, timestamp=timestamp, data=data, model_name=model_name)
+
+# the furniture route
 @app.route('/furniture')
 @login_required
 def furniture():
@@ -149,6 +164,7 @@ def furniture():
     timestamp = int(time.time())
     return render_template('Furniture.html', username=current_user.username, timestamp=timestamp, data=data)
 
+# the roomdesign route
 @app.route('/roomdesign')
 @login_required
 def roomdesign():
@@ -156,13 +172,61 @@ def roomdesign():
     timestamp = int(time.time())
     return render_template('RoomDesign.html', username=current_user.username, timestamp=timestamp, data=data)
 
+# the customization route
+@app.route('/customization')
+@login_required
+def customization():
+    data = []
+    timestamp = int(time.time())
+    return render_template('customization.html', username=current_user.username, timestamp=timestamp, data=data)
 
+# the logout route
 @app.route('/logout')
 @login_required
 def logout():
     logout_user()
     return redirect(url_for('login'))
 
+
+# Helper function to check if the file has an allowed extension
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
+
+
+@app.route('/createroom', methods=['GET', 'POST'])
+@login_required
+def create_room():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        image = save_room_image(request.files.get('image'))
+        color = request.form.get('color')
+        date = request.form.get('date')
+        price = float(request.form.get('price'))
+
+        room = Room(name=name, image=image, color=color, date=date, price=price, user_id=current_user.id)
+
+        try:
+            db.session.add(room)
+            db.session.commit()
+            flash('Room created successfully.', 'success')
+            return redirect(url_for('roomdesign'))
+        except Exception as e:
+            db.session.rollback()
+            flash(f'Error creating room: {str(e)}', 'danger')
+
+    return render_template('newRoom.html', username=current_user.username)
+
+# save the image to the uploads folder
+def save_room_image(image):
+    if image:
+        upload_folder = os.path.join(current_app.root_path, 'uploads')
+        os.makedirs(upload_folder, exist_ok=True)
+        filename = secure_filename(image.filename)
+        filepath = os.path.join(upload_folder, filename)
+        image.save(filepath)
+        return os.path.relpath(filepath, current_app.root_path)
+
+    return 'placeholder.jpg'
 
 
 if __name__ == '__main__':

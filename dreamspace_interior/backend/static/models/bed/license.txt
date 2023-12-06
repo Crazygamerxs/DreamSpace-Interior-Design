@@ -1,0 +1,11 @@
+Model Information:
+* title:	Messy Bed
+* source:	https://sketchfab.com/3d-models/messy-bed-aebc9bae5a4d459494d1e5de76658d5a
+* author:	lucaboechat (https://sketchfab.com/lucaboechat)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Messy Bed" (https://sketchfab.com/3d-models/messy-bed-aebc9bae5a4d459494d1e5de76658d5a) by lucaboechat (https://sketchfab.com/lucaboechat) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

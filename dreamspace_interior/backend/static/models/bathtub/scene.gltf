@@ -1,0 +1,532 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 9737,
+      "max": [
+        27.17778205871582,
+        -126.63328552246094,
+        10.250382423400879
+      ],
+      "min": [
+        -29.671052932739258,
+        -151.30392456054688,
+        -8.845503807067871
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 116844,
+      "componentType": 5126,
+      "count": 9737,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.9999998807907104
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 9737,
+      "max": [
+        0.9999999403953552,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.9999978542327881,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 9737,
+      "max": [
+        0.8331949710845947,
+        0.9974439740180969
+      ],
+      "min": [
+        0.010389000177383423,
+        0.1156969964504242
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 50160,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 233688,
+      "componentType": 5126,
+      "count": 9661,
+      "max": [
+        -27.173786163330078,
+        -143.85763549804688,
+        10.250382423400879
+      ],
+      "min": [
+        -28.714719772338867,
+        -145.39857482910156,
+        8.307085990905762
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 349620,
+      "componentType": 5126,
+      "count": 9661,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.9999998807907104
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 155792,
+      "componentType": 5126,
+      "count": 9661,
+      "max": [
+        1.0,
+        0.999999463558197,
+        0.999971866607666,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.9999979138374329,
+        -0.9999852180480957,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 77896,
+      "componentType": 5126,
+      "count": 9661,
+      "max": [
+        0.8331949710845947,
+        0.9974439740180969
+      ],
+      "min": [
+        0.6109910011291504,
+        0.5119220018386841
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 200640,
+      "componentType": 5125,
+      "count": 49920,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 465552,
+      "componentType": 5126,
+      "count": 6967,
+      "max": [
+        -21.724201202392578,
+        -137.98626708984375,
+        18.95195198059082
+      ],
+      "min": [
+        -29.043697357177734,
+        -140.14212036132813,
+        8.01738452911377
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 549156,
+      "componentType": 5126,
+      "count": 6967,
+      "max": [
+        1.0,
+        1.0,
+        0.9999414682388306
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 310368,
+      "componentType": 5126,
+      "count": 6967,
+      "max": [
+        0.9999987483024597,
+        1.0,
+        0.9999948143959045,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 155184,
+      "componentType": 5126,
+      "count": 6967,
+      "max": [
+        0.9862689971923828,
+        0.9822859764099121
+      ],
+      "min": [
+        0.3169499933719635,
+        0.25441598892211914
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 400320,
+      "componentType": 5125,
+      "count": 38304,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 632760,
+      "componentType": 5126,
+      "count": 3817,
+      "max": [
+        26.442913055419922,
+        -127.4281005859375,
+        8.631346702575684
+      ],
+      "min": [
+        -26.442913055419922,
+        -150.50909423828125,
+        -8.828852653503418
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 678564,
+      "componentType": 5126,
+      "count": 3817,
+      "max": [
+        0.9994832277297974,
+        0.9994786381721497,
+        1.0
+      ],
+      "min": [
+        -0.9994833469390869,
+        -0.9994781017303467,
+        0.032143011689186096
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 421840,
+      "componentType": 5126,
+      "count": 3817,
+      "max": [
+        0.9999998807907104,
+        0.3781723082065582,
+        0.9991399049758911,
+        1.0
+      ],
+      "min": [
+        0.031113671138882637,
+        -0.6221957802772522,
+        -0.9991697072982788,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 210920,
+      "componentType": 5126,
+      "count": 3817,
+      "max": [
+        0.9889529943466187,
+        0.30631300806999207
+      ],
+      "min": [
+        0.5259550213813782,
+        0.007639000192284584
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 553536,
+      "componentType": 5125,
+      "count": 22452,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Vladyslav Holhanov (https://sketchfab.com/vladicom08)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/bathroom-f1b05ddf1b634481903e353d41b6a654",
+      "title": "Bathroom"
+    },
+    "generator": "Sketchfab-12.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 643344,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 241456,
+      "byteOffset": 643344,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 724368,
+      "byteOffset": 884800,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 482912,
+      "byteOffset": 1609168,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2092080,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/initialShadingGroup_baseColor.png"
+    },
+    {
+      "uri": "textures/initialShadingGroup_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/initialShadingGroup_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "initialShadingGroup",
+      "normalTexture": {
+        "index": 2,
+        "scale": 0.13547406422192665
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.9076572297168916,
+          0.9076572297168916,
+          0.9076572297168916,
+          1.0
+        ],
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        },
+        "roughnessFactor": 0.1658749762492875
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_3",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 16,
+            "POSITION": 15,
+            "TANGENT": 17,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "name": "Bathroom_high.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_2"
+    },
+    {
+      "mesh": 1,
+      "name": "Object_3"
+    },
+    {
+      "mesh": 2,
+      "name": "Object_4"
+    },
+    {
+      "mesh": 3,
+      "name": "Object_5"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

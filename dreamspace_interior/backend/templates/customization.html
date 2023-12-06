@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customization Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('static/background.jpg');
+        }
+
+        .customization-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .customization-section {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .section-title {
+            margin-top: 1.7%;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .customization-box {
+            box-sizing: border-box;
+            width: 25%;
+            margin: 10px;
+            padding: 5px;
+            border: 4px solid #7b7b7b;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .customization-image {
+            width: 100%;
+            height: 100px;
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .customization-details {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 50px;
+            line-height: 80px;
+            z-index: 100;
+        }
+
+        .nav-logo h1 {
+            margin: 0;
+            color: white;
+            font-size: 25px;
+            font-weight: 600;
+            margin-right: 600px;
+            margin-left: -150px;
+        }
+
+        .nav-button .btn {
+            width: 140px;
+            height: 50px;
+            font-weight: 500;
+            font-size: large;
+            background: #4caf50;
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: .3s ease;
+            margin-top: -10px;
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-logo">
+            <h1>{{ username }}</h1>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="redirect('/customization')">
+                Customization
+            </button>
+            <button class="btn white-btn" id="loginBtn" onclick="redirect('/dashboard')">
+                Dashboard
+            </button>
+        </div>
+    </nav>
+    <div class="customization-container">
+        <!-- Texture Section -->
+        <div class="customization-section">
+            <div class="section-title">Texture</div>
+
+            <!-- Texture Option 1 -->
+            <div class="customization-box">
+                <img src="{{ url_for('static', filename='texture.png') }}" alt="Texture Option 1" class="customization-image">
+                <div class="customization-details">
+                    <h3>Crumbled White</h3>
+                    <p>Price: $20</p>
+                </div>
+            </div>
+
+
+            <!-- Add more texture options as needed -->
+
+        </div>
+
+        <!-- Color Section -->
+        <div class="customization-section">
+            <div class="section-title">Color</div>
+
+            <!-- Color Option 1 -->
+            <div class="customization-box">
+                <img src="{{ url_for('static', filename='orange.png') }}" alt="Color Option 1" class="customization-image">
+                <div class="customization-details">
+                    <h3>Orange</h3>
+                    <p>Price: $10</p>
+                </div>
+            </div>
+
+            <!-- Color Option 2 -->
+            <div class="customization-box">
+                <img src="{{ url_for('static', filename='yellow.png') }}" alt="Color Option 2" class="customization-image">
+                <div class="customization-details">
+                    <h3>Yellow</h3>
+                    <p>Price: $10</p>
+                </div>
+            </div>
+
+            <!-- Add more color options as needed -->
+
+        </div>
+
+        <!-- Material Section -->
+        <div class="customization-section">
+            <div class="section-title">Material</div>
+
+            <!-- Material Option 1 -->
+            <div class="customization-box">
+                <img src="{{ url_for('static', filename='wood.png') }}" alt="Material Option 1" class="customization-image">
+                <div class="customization-details">
+                    <h3>Wood</h3>
+                    <p>Price: $50</p>
+                </div>
+            </div>
+
+
+            <!-- Add more material options as needed -->
+
+        </div>
+
+    </div>
+</body>
+
+<script>
+    function redirect(url) {
+        window.location.href = url;
+    }
+</script>
+
+</html>

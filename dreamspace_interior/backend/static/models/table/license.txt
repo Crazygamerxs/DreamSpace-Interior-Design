@@ -1,0 +1,11 @@
+Model Information:
+* title:	Writing Table (game ready asset)
+* source:	https://sketchfab.com/3d-models/writing-table-game-ready-asset-2172497f855e4028a0ea9da1136d6c0d
+* author:	Pixel Life (https://sketchfab.com/pixellife)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Writing Table (game ready asset)" (https://sketchfab.com/3d-models/writing-table-game-ready-asset-2172497f855e4028a0ea9da1136d6c0d) by Pixel Life (https://sketchfab.com/pixellife) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

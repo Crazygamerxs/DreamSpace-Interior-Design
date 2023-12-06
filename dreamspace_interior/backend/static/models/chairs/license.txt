@@ -1,0 +1,11 @@
+Model Information:
+* title:	Dirty Plastic Chairs & Tables (For Unity)
+* source:	https://sketchfab.com/3d-models/dirty-plastic-chairs-tables-for-unity-0a6eafb63018479b98d29456dc3f6fc8
+* author:	CHEESE ARG 3D (https://sketchfab.com/CheeseARG3d)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Dirty Plastic Chairs & Tables (For Unity)" (https://sketchfab.com/3d-models/dirty-plastic-chairs-tables-for-unity-0a6eafb63018479b98d29456dc3f6fc8) by CHEESE ARG 3D (https://sketchfab.com/CheeseARG3d) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

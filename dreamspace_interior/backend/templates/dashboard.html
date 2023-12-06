@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Dashboard</title>
-    <style>
-        body {
+    <!-- Include Three.js library -->
+    <script type="module" src="https://cdn.skypack.dev/three@0.129.0/build/three.module.js"></script>
+    <!-- Include OrbitControls.js for camera control -->
+    <script type="module" src="https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js"></script>
+</head>
+<style>
+    body {
             font-family: 'Arial', sans-serif;
             background-image: url('static/background.jpg');
             background-size: cover; /* or contain, depending on your preference */
             background-repeat: no-repeat;            text-align: center;
             margin: 50px;
         }
-
         h1 {
             color: #ffffff;
         }
@@ -20,50 +24,6 @@
             display: flex;
             justify-content: space-between;
             padding: 10px;
-        }
-
-        .left-box, .right-box {
-            background-color: white;
-            border: 1px solid gray;
-            padding: 10px;
-            height: 520px; /* Set the desired height */
-            box-sizing: border-box; /* Ensure padding and border don't increase width */
-            border-radius: 10px;
-            margin-top: 15px;
-            margin: 10px;
-        }
-
-        .left-box {
-            position: relative;
-            flex: 2.5; /* Adjust flex ratio for the smaller box */
-            width: calc(90.33% - 10px); /* Adjust width considering padding and border */
-        }
-
-        video {
-            width: 100%;
-            height: 100%; /* Adjust to cover the entire left box */
-            border: 1px solid gray;
-            border-radius: 10px;
-            position: absolute; /* Add this to position the video element within the left box */
-            top: 0;
-            left: 0;
-        }
-
-        /* Add styles for the new buttons */
-        #startRecognition, #stopRecognition {
-            background-color: rgb(211, 76, 18);
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-
-        .right-box {
-            flex: 0.7; /* Adjust flex ratio for the smaller box */
-            width: calc(33.33% - 10px); /* Adjust width considering padding and border */
-            align-items: first baseline;
         }
         button {
             background-color:  rgb(211, 76, 18);
@@ -89,7 +49,7 @@
             font-size: 25px;
             font-weight: 600;
             margin-right: 600px;
-    
+            margin-left: -150px;
         }
 
 
@@ -115,6 +75,7 @@
             background: grey;
             color: #ffffff;
             margin-top: -40px;
+            width: 200px;
         }
         form {
             max-width: 300px;
@@ -149,34 +110,95 @@
             font-size: large;
         }
 
-    </style>
-</head>
+        #container3D canvas {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .left-box, .right-box {
+            border: 1px solid gray;
+            padding: 10px;
+            height: 520px; /* Set the desired height */
+            box-sizing: border-box; /* Ensure padding and border don't increase width */
+            border-radius: 10px;
+            margin-top: 15px;
+            margin: 10px;
+        }
+        .left-box {
+            position: relative;
+            flex: 2.5; /* Adjust flex ratio for the smaller box */
+            width: calc(90.33% - 10px); /* Adjust width considering padding and border */
+        }
+        .right-box {
+            flex: 0.7; /* Adjust flex ratio for the smaller box */
+            width: calc(33.33% - 10px); /* Adjust width considering padding and border */
+            align-items: first baseline;
+        }
+        #shelfImage {
+            width: 100%;
+            /* Add other styles as needed... */
+        }
+
+        .canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 50%;
+            overflow: hidden;
+        }
+        .interactive-container {
+        width: 100%; /* Adjust the width as needed */
+        height: 100%; /* Keep the height as 100% to match the parent container */
+        overflow: hidden;
+        }
+</style>
 <body>
     <nav class="nav">
         <div class="nav-logo">
             <h1>{{ username }}</h1>
         </div>
         <div class="nav-button">
-                <button class="btn white-btn" id="loginBtn" onclick="redirect('/register')">
-                    Logout
-                </button>
+            <button class="btn white-btn" id="loginBtn" onclick="redirect('/')">
+                Logout
+            </button>
+            <button class="btn white-btn" id="loginBtn" onclick="redirect('/roomdesign')">
+                Room Design
+            </button>
+            <button class="btn white-btn" id="loginBtn" onclick="redirect('/furniture')">
+                Furniture Catalogue
             </button>
         </div>
-    </nav>
+           </nav>
 
-    
-    <div class="content">
-        <div class="right-box">
+        <div class="content">
+            <div class="right-box" id="rightBox">
+                <!-- Container for the shelf image -->
+                <img src="{{ url_for('static', filename='shelf1.png') }}" alt="Shelf Image" id="shelfImage" draggable="true">
+                <!-- Container for the 3D scene -->
+                <div class="canvas-container interactive-container" id="container3D"></div>
+            </div>
+            <div class="left-box">
+                <!-- Your existing content goes here -->
+            </div>
         </div>
-        <div class="left-box">
-        </div>        
+        
 
-    </div>
-
-<script>
-    function redirect(url) {
-        window.location.href = url;
-    }
-</script>
+    <!-- Include your main.js for 3D scene rendering -->
+    <script type="module" src="{{ url_for('static', filename='main.js') }}"></script>
+    <script>
+        // Add event listener for the drag-and-drop functionality
+        document.getElementById('shelfImage').addEventListener('dragstart', function (event) {
+            event.dataTransfer.setData('text/plain', 'shelf'); // Use 'shelf' as the data
+        });
+    </script>
+    <script>
+        function redirect(url) {
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>

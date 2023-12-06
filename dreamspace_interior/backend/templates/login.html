@@ -123,36 +123,62 @@
             margin-left: -20%;
         }
 
+        ul.flash-messages {
+            list-style-type: none;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .flash-message {
+            color: red;
+            font-size: 18px;
+            border: 2px solid red;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
 
 
     </style>
 </head>
 <body>
     
-<nav class="nav">
-    <div class="nav-logo">
-        <img src="{{ url_for('static', filename='log.png') }}" alt="Logo">
-    </div>   
-    <div class="nav-button">
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="{{ url_for('static', filename='log.png') }}" alt="Logo">
+        </div>   
         <div class="nav-button">
-            <button class="btn white-btn" id="loginBtn" onclick="redirect('/login')">
-                Log In 
-            </button>
-            <button class="btn white-btn" id="loginBtn" onclick="redirect('/register')">
-                Register
-            </button>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="redirect('/login')">
+                    Log In 
+                </button>
+                <button class="btn white-btn" id="registerBtn" onclick="redirect('/register')">
+                    Register
+                </button>
+            </div>
         </div>
-    </div>
-</nav>
-    <h1>Log in Here</h1>
-
-    <div class="form-box">
-        <form method="post" action="{{ url_for('login') }}">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-    </div>
+    </nav>
+        <h1>Log in Here</h1>
+    
+        <div class="form-box">
+            
+            <form method="post" action="{{ url_for('login') }}">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <!-- Display flashed messages -->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class="flash-messages">
+               {% for message in messages %}
+                   <li class="flash-message">{{ message }}</li>
+               {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+            </form>
+</div>
 </body>
 <script>
     function redirect(url) {

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('static/background.jpg');
+        }
+
+        .furniture-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .furniture-box {
+            box-sizing: border-box;
+            width: 25%; /* Adjust the width as needed */
+            margin: 10px;
+            padding: 5px;
+            border: 4px solid #7b7b7b; /* Increased border thickness */
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+
+        .furniture-image {
+            width: 50%; /* Adjust the width as needed */
+            height: 50px; /* Adjust the height as needed */
+            max-width: 100%; /* Ensure the image does not exceed its original size */
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+
+        .furniture-details {
+            font-size: 14px;
+            color: #ffffff;
+        }
+        #shelfImage {
+            width: 70%;
+            height: 50%    ;
+            /* Add other styles as needed... */
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 50px;
+            line-height: 80px;
+            z-index: 100;
+        }
+        .nav-logo h1 {
+            margin: 0; /* Add this to remove default margin */
+            color: white;
+            font-size: 25px;
+            font-weight: 600;
+            margin-right: 600px;
+            margin-left: -150px;
+        }
+
+
+        .nav-button .btn {
+            width: 140px;
+            height: 50px;
+            font-weight: 500;
+            font-size: large;
+            background: rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: .3s ease;
+            margin-top: -10px; /* Adjusted margin */
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-logo">
+            <h1>{{ username }}</h1>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="redirect('/dashboard')">
+                Dashboard
+            </button>
+        </div>
+           </nav>
+<div class="furniture-container">
+    <!-- Furniture Item 1 -->
+    <div class="furniture-box">
+        <img src="{{ url_for('static', filename='shelf1.png') }}" alt="Shelf Image" id ="shelfImage" >
+        <div class="furniture-details">
+            <h3>Wooden Shelf</h3>
+            <p>A beautiful wooden shelf for organizing your belongings. Dimensions: 36"x12"x72"</p>
+            <p>Material: Oak Wood</p>
+            <p>Color: Brown</p>
+        </div>
+    </div>
+
+    <!-- Furniture Item 2 -->
+    <div class="furniture-box">
+        <img src="{{ url_for('static', filename='dino1.png') }}" alt="Dino Image" id ="shelfImage" >
+        <div class="furniture-details">
+            <h3>Dino Skull Sculpture</h3>
+            <p>A unique piece of art featuring a detailed dino skull. Dimensions: 18"x8"x12"</p>
+            <p>Material: Resin</p>
+            <p>Color: Fossil Gray</p>
+        </div>
+    </div>
+
+    <!-- Furniture Item 3 -->
+    <div class="furniture-box">
+        <img src="{{ url_for('static', filename='table1.png') }}" alt="Table Image" id ="shelfImage" >
+        <div class="furniture-details">
+            <h3>Modern Coffee Table</h3>
+            <p>A sleek and modern coffee table for your living room. Dimensions: 40"x24"x18"</p>
+            <p>Material: Glass and Metal</p>
+            <p>Color: Black</p>
+        </div>
+    </div>
+
+    <!-- Repeat the structure for additional furniture items -->
+    <!-- Furniture Item 4, 5, 6, ... -->
+
+</div>
+
+</body>
+<script>
+    function redirect(url) {
+        window.location.href = url;
+    }
+</script>
+</html>

@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <style>
-        body {
+         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 50px;
-            background-color: rgb(5, 121, 175);
+            background-image: url('static/background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
         }
+
         h1 {
             color: #ffffff;
             margin-top: 12%;
         }
-        
+
         form {
-            max-width: 300px;
+            max-width: 400px; /* Increased width */
             margin: 0 auto;
-            padding: 20px; /* Add padding for the off-white box */
-            background: rgba(255, 255, 255, 0.9); /* Set the background color for the off-white box */
-            border-radius: 10px; /* Add border-radius for rounded corners */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+            padding: 30px; /* Increased padding for the off-white box */
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px; /* Increased border-radius for rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            height: 200px;
         }
 
         label {
@@ -32,19 +36,23 @@
 
         input {
             width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
+            padding: 12px; /* Increased padding for input fields */
+            margin-bottom: 40px;
             box-sizing: border-box;
+            border-radius: 8px; /* Rounded edges for input fields */
+            font-size: 16px; /* Increased font size */
         }
 
         button {
-            background-color: rgb(211, 76, 18);
+            background-color:  rgb(211, 76, 18);
             color: white;
             padding: 10px 15px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
+
+
         .nav {
             position: fixed;
             top: 0;
@@ -56,21 +64,21 @@
             z-index: 100;
         }
         .nav-button .btn {
-    width: 140px;
-    height: 50px;
-    font-weight: 500;
-    font-size: large;
-    background: rgba(255, 255, 255, 0.4);
-    color: #ffffff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: .3s ease;
-    margin-top: auto;
-    margin-left: 5px; /* Adjusted margin */
-    margin-right: 5px; /* Adjusted margin */
-    display: inline-block; /* Display buttons in a row */
-}
+            width: 140px;
+            height: 50px;
+            font-weight: 500;
+            font-size: large;
+            background: rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: .3s ease;
+            margin-top: auto;
+            margin-left: 5px; /* Adjusted margin */
+            margin-right: 5px; /* Adjusted margin */
+            display: inline-block; /* Display buttons in a row */
+        }
 
         .btn.white-btn {
             background: rgba(255, 255, 255, 0.7);
@@ -104,13 +112,20 @@
             flex-direction: column;
         }
         
+        .nav-logo img {
+            align-items: left;
+            width: 400px; /* Adjust the width as needed */
+            height: 100px; /* Adjust the height as needed */
+            margin-right: 200px; /* Add margin for spacing between the logo and other elements */
+            margin-left: -20%;
+        }
     </style>
 </head>
 <body>
     <nav class="nav">
         <div class="nav-logo">
-            <h1>LOGO .</h1>
-        </div>
+            <img src="{{ url_for('static', filename='log.png') }}" alt="Logo">
+        </div>   
         <div class="nav-button">
             <button class="btn white-btn" id="loginBtn" onclick="redirect('/login')">
                 Log In
